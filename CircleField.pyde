@@ -36,21 +36,21 @@ def draw():
                 stroke(155,155,0)
             else:
                 stroke(0,155,155)
-            ellipse(x,y,sz,sz)
-            if frameCount > 100 and frameCount < 200:
-                fc = frameCount
+            if frameCount < 50:
+                ellipse(x,y,sz,sz)
+            elif frameCount > 50 and frameCount < 200:
+                fc = frameCount-100
                 d = lerp(sz,sz*sqrt(3),fc/20.0+(10000-((x)**2+(y)**2))/100000.0)
                 #d = *)
                 d = constrain(d,sz,sz*sqrt(3))
                 ellipse(x,y,d,d)
             else:
-                fc = frameCount - 200
+                fc = frameCount-200
                 d = lerp(sz*sqrt(3),sz,fc/20.0+(10000-((x)**2+(y)**2))/100000.0)
                 #d = *)
                 d = constrain(d,sz,sz*sqrt(3))
                 ellipse(x,y,d,d)
             if frameCount > 400:
                 noLoop()
-    t += dt
-    if t >= TWO_PI:
-        t = 0
+    #if frameCount % 2 == 0:
+        #saveFrame('####.png')
