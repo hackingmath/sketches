@@ -6,3 +6,7 @@ And this one, from Keith Briain: <br>
 <br><br>
 And this one, from Al Sweigart: <br>
 <img src = 'beads.gif'>
+<br><br>
+This is the "Holtham Wheel" from Martin Holtham:<br>
+<img src = 'holthamWheel.gif'>
+<br><br>
