@@ -1,5 +1,5 @@
-'''Cloning the background ot the Bay Piggies meeting
-at linkedIn last night
+'''Cloning the background at the Bay Piggies meeting
+at LinkedIn last night
 December 21, 2018'''
 
 GRAV = PVector(0,.005) #force of gravity
