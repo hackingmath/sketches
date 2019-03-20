@@ -101,20 +101,20 @@ def setup():
     
 def draw():
     global level, pointList, ratio, freeze,stop_val
-    frameRate(10)
+    frameRate(20)
     background(0)
     translate(20,20)
     hilbert(level % len(pointList),ratio)
     level += 1
     if not freeze:
-        ratio += 0.05
+        ratio += 0.01
     if ratio >= 1:
         ratio = 0 
         freeze = True
         stop_val = frameCount
-    if frameCount == stop_val + 5:
+    if frameCount == stop_val + 25:
         freeze = False
-        noLoop()
+        #noLoop()
     saveFrame('####.png')
     
 def hilbert(level,ratio):
