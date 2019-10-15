@@ -25,10 +25,10 @@ def draw():
         translate(sz,0)
         trinode(sz,45+45*sin(frameCount/100.0),5)
         popMatrix()
-    if frameCount %2 == 0:
-        saveFrame("####.png")
-    if frameCount > 648:
-        noLoop()
+    #if frameCount %2 == 0:
+    #    saveFrame("####.png")
+    #if frameCount > 648:
+    #    noLoop()
         
 def trinode(sz,ang,level):
     fill(PINK)
