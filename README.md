@@ -10,6 +10,6 @@ And this one, from Al Sweigart: <br>
 This is the "Holtham Wheel" from Martin Holtham:<br>
 <img src = 'holthamWheel.gif'>
 <br><br>
-Here's a bunch of oscillating dots, inspired by Bees and Bombs:<br>
-<img src = 'oscillatingDots.gif'>
+Here's a bunch of rotating triangles, inspired by Bees and Bombs:<br>
+<img src = 'ezgif.com-optimize.gif'>
 <br><br>
