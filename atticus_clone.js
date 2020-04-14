@@ -2,10 +2,10 @@
 need p5.js file to work
 Makes one eigth of the design,
 then reflects and rotates to fill the grid.
-But the rotation is a little off!
+But the rotation is a little off in CodePen.
 June 30, 2017 */
 
-var sz = 45; //distance between dots
+var sz = 5; //distance between dots
 var nodes = ['blank']; //list of nodes
 var mirrornodes = ['blank']; //list of reflected nodes
 var connections = [
@@ -93,7 +93,9 @@ function Grid(){
   mirrornodes.push(new Node(2.0*sz,-2*sz,9)); //node 8
   
   //each grid gets its own color:
-  this.col = color(random(255),random(255), random(255));
+  this.col = 0;
+  //Uncomment to make it colorful
+  //this.col = color(random(255),random(255), random(255));
   //list of connections
   var connectChoice = [];
   //fill the list with random 0's and 1's
