@@ -19,6 +19,11 @@ ycor = 300
 
 done = False
 while not done:
+    #Check all the key presses and mouse clicks
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:  # if pygame window is closed by user
+            done = True
+    #graphics code goes here
     screen.fill(BLACK)
     for i in range(31):
         pygame.draw.circle(screen,WHITE,(2*i*radius,int(ycor+250*sin(t/200+i/5))),radius)
