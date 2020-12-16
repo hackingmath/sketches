@@ -1,0 +1,29 @@
+import pygame
+from math import sin
+
+#declare constants
+RED = (255,0,0)
+GREEN = (0,255,0)
+BLUE = (0,0,255)
+WHITE = (255,255,255)
+BLACK = (0,0,0)
+
+pygame.init()
+screen = pygame.display.set_mode([600,600])
+#make a caption
+pygame.display.set_caption("Insert Caption Here!")
+#time variable
+t = 0
+radius = 10
+ycor = 300
+
+done = False
+while not done:
+    screen.fill(BLACK)
+    for i in range(31):
+        pygame.draw.circle(screen,WHITE,(2*i*radius,int(ycor+250*sin(t/200+i/5))),radius)
+
+    t += 1
+    pygame.display.update()
+
+pygame.quit()
