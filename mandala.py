@@ -4,7 +4,7 @@ Sept. 8, 2024"""
 from turtle import *
 from math import pi,sqrt
 
-shape('turtle')
+ht()#shape('turtle')
 
 def circle(r):
     """C = 2*pi*r
@@ -20,6 +20,9 @@ def circle(r):
     for i in range(360):
         fd(d)
         lt(1)
+    pu()
+    rt(90)
+    bk(r)
 
 def mandala(d):
     """d is distance between centers"""
@@ -51,5 +54,29 @@ def mandala(d):
         circle(d)
         ht()
 
-tracer(10)
-mandala(100)
+def mandala2(d):
+    """Using loops.
+    Rows have 3,4,5,4,3 circles"""
+    circles = [3,4,5,4,3]
+    ds = d*sqrt(3)
+    locations = [
+        (-ds,d),
+        (-ds,0),
+        (-ds,-d),
+        (-ds/2,-d*1.5),
+        (0,-2*d)
+        ]
+    for i,v in enumerate(locations):
+        pu()
+        goto(v[0],v[1])
+        for j in range(circles[i]):
+            circle(d)
+            pu()
+            #goto(v[0],v[1])
+            seth(30)
+            fd(d)
+    
+            
+
+tracer(3)
+mandala2(100)
